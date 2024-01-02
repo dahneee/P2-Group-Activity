@@ -24,7 +24,7 @@
             @endif
 
             @if(session() -> has('success'))
-                <div class="alert alert-sucess">{{session('success')}}</div>
+                <div class="alert alert-success">{{session('success')}}</div>
             @endif
         </div>
         <div class="container main py-5">
