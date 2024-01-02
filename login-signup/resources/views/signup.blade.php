@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <!--========== START OF LOGIN SECTION ==========-->
+    <!--========== START OF SIGNUP SECTION ==========-->
     <div class="wrapper">
         <div class="position-absolute mt-1 container-fluid">
             @if($errors->any())
@@ -43,7 +43,7 @@
                             <label for="name">Name</label>
                         </div>
                         <div class="input-field">
-                            <input type="email" class="input" id="email" name="email" required>
+                            <input type="text" class="input" id="email" name="email" required autocomplete="off">
                             <label for="email">Email</label>
                         </div>
                         <div class="input-field">
@@ -65,7 +65,7 @@
             </div>
         </div>
     </div>
-    <!--========== END OF LOGIN SECTION ==========-->
+    <!--========== END OF SIGNUP SECTION ==========-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     <script src="/src/components/main.js"></script>
 </body>
