@@ -46,8 +46,11 @@
                             <input type="password" class="input"  id="password" name="password" required>
                             <label for="password">Password</label>
                         </div>
+                        <div>
+                            <a href="{{route('forget_password')}}">Forget Password</a>
+                        </div>
                         <div class="input-field">
-                            <input type="submit" class="submit" value="Login" id="submit" onclick="Login()">
+                            <input type="submit" class="submit" value="Login" id="submit">
                         </div>
                         <div class="signin">
                             <span>Don't have an account? <a href="/signup">Sign up here</a></span>

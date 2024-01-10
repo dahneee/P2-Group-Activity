@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\AuthManager;
+use App\Http\Controllers\ForgetPasswordManager;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,4 +29,11 @@ Route::post('/login', [AuthManager::class, 'loginPost']) -> name('login_post');
 Route::get('/signup', [AuthManager::class, 'signup']) -> name('signup');
 Route::post('/signup', [AuthManager::class, 'signupPost']) -> name('signup_post');
 
-Route::get('/logout', [AuthManager::class, 'logout']) -> name('logout');
+Route::get('/forget-password', [ForgetPasswordManager::class, 'forgetPassword']) -> name('forget_password');
+Route::post('/forget-password', [ForgetPasswordManager::class, 'forgetPasswordPost']) -> name('forget_password_post');
+
+Route::get('/reset-password/{token}', [ForgetPasswordManager::class, 'resetPassword']) -> name('reset_password');
+Route::post('/reset-password', [ForgetPasswordManager::class, 'resetPasswordPost']) -> name('reset_password_post');
+
+
+// Route::get('/logout', [AuthManager::class, 'logout']) -> name('logout');
