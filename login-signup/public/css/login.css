@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;700&display=swap');
+
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .wrapper {
@@ -15,8 +17,8 @@
 }
 
 .row {
-    width: 900px;
-    height: 550px;
+    width: 800px;
+    height: 500px;
     border-radius: 10px;
     background: #fefefe;
     box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
@@ -30,12 +32,17 @@
 }
 
 .text p {
-    color: #fefefe;
+    color: #D9BD2D;
     font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.katanungan {
+    color: #D9BD2D;
 }
 
 .side-image {
-    background: #01133f;
+    background: linear-gradient(to right, #3A4F24, #3A4F24);
     position: relative;
     border-radius: 10px 0 0 10px;
 }
@@ -103,7 +110,7 @@ img {
 
 .input-field .input:focus, 
 .input-field .input:valid {
-    border-bottom: 1px solid #743ae1;
+    border-bottom: 3px solid #3A4F24;
 }
 
 .submit {
@@ -115,7 +122,7 @@ img {
 }
 
 .submit:hover {
-    background: rgba(37, 95, 156, 0.5);
+    background: #D9BD2D;
     color: #fefefe;
 }
 
@@ -136,6 +143,26 @@ span a:hover {
     text-decoration: underline;
     color: #0e0e0e;
 }
+.forget {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.forget a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #3A4F24;
+}
+
+.forget a:hover {
+    color: #D9BD2D;
+    transition: .3s;
+}
+
+.alert {
+    z-index: 5;
+    opacity: .8;
+}
 
 @media only screen and (max-width: 768px) {
     .side-image {
@@ -144,21 +171,17 @@ span a:hover {
 
     .text {
         position: absolute;
-        top: 70%;
+        top: 60%;
         text-align: center;
     }
 
     .text p {
-        font-size: 1.0625rem;
+        font-size: .9375rem;
     }
 
     .row {
         max-width: 400px;
         width: 100%;
+        height: 550px;
     }
-}
-
-.alert {
-    z-index: 5;
-    opacity: .8;
 }
