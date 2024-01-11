@@ -14,19 +14,19 @@
     <div class="wrapper">
         <div class="position-absolute mt-1 container-fluid">
             @if($errors->any())
-            <div class="col-12">
-                @foreach ($errors -> all() as $error)
-                <div class="alert alert-danger">{{$error}}</div>
-                @endforeach
-            </div>
+                <div id="error" class="col-12">
+                    @foreach ($errors -> all() as $error)
+                        <div class="alert alert-danger">{{$error}}</div>
+                    @endforeach
+                </div>
             @endif
 
             @if(session() -> has('error'))
-            <div class="alert alert-danger">{{session('error')}}</div>
+                <div id="session-error" class="alert alert-danger">{{session('error')}}</div>
             @endif
 
             @if(session() -> has('success'))
-            <div class="alert alert-success">{{session('success')}}</div>
+                <div id="session-success" class="alert alert-success">{{session('success')}}</div>
             @endif
         </div>
         <div class="container main py-5">
@@ -70,6 +70,7 @@
     <!--========== END OF SIGNUP SECTION ==========-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
     <script src="/src/components/main.js"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 </body>
 
 </html>
