@@ -37,7 +37,7 @@ class AuthManager extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:8',
-            'confirm_password' => 'required|min:8|same:password'
+            'confirm_password' => 'required|same:password'
         ]);
 
         $data['name'] = $request->name;
