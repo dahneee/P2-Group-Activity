@@ -35,5 +35,4 @@ Route::post('/forget-password', [ForgetPasswordManager::class, 'forgetPasswordPo
 Route::get('/reset-password/{token}', [ForgetPasswordManager::class, 'resetPassword']) -> name('reset_password');
 Route::post('/reset-password', [ForgetPasswordManager::class, 'resetPasswordPost']) -> name('reset_password_post');
 
-
-// Route::get('/logout', [AuthManager::class, 'logout']) -> name('logout');
+Route::post('/logout', [AuthManager::class, 'logout']) -> name('logout');
